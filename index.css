@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;  
+    margin:0;
+    padding:0;  
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+}
+
+.calculator{
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 25px;
+    background: linear-gradient(to bottom right, #404040, #313131);
+}
+
+.out-wrap{    
+    position: relative;
+    width: calc(100% - 4px);
+    margin-bottom: 15px;
+    padding: 0 5px;
+    background: #a9b2b4;
+    
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.output {
+    height: 5rem;
+    width: 100%;
+    line-height: 5rem;
+    font-size: 2rem;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.tmp {
+    position: absolute;
+    right: 5px;
+    top: 0.25rem;
+    color: grey;
+    background-color: transparent;
+    text-align: right;
+    border: none;
+}
+
+.button-wrap{
+    display:grid;
+    grid-template-columns: repeat(4, 83px);
+    grid-auto-rows: 60px;
+    grid-gap:5px;
+    
+}
+.button-wrap input{
+    background: grey;
+    color: #f1f1f1;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    outline: 0;
+    transition: 0.3s;
+}
+.button-wrap input:hover{
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button-wrap input:focus{
+    outline:none;
+    cursor: pointer;
+}
+
+
+.button-wrap .sign,
+.button-wrap .delete,
+.button-wrap .dot,
+.button-wrap .swit,
+.button-wrap .result{
+    background-color:#a1bd66;
+}
+
+.button-wrap .clear{
+    background-color: tomato;
+    grid-column: span 2;
+} 
